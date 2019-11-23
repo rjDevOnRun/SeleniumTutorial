@@ -23,7 +23,7 @@ namespace SeleniumTutorial
             //driver.Url = "http://facebook.com"; // Add the Url to viist on browser
             
             // USING CHROME
-            IWebDriver driver = new ChromeDriver(@"D:\DEVELOPMENT\RJGitRepository\SeleniumTutorial\chromedriver_win32 _78.0105");
+            IWebDriver driver = new ChromeDriver(@"Enter the path where the chrome driver is located...");
             driver.Navigate().GoToUrl("http://facebook.com"); // Add the Url to viist on browser
                        
             // Maximize the browser window
@@ -32,8 +32,8 @@ namespace SeleniumTutorial
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             // SendKeys to UID / PWD textboxes and login.
-            driver.FindElement(By.Name("email")).SendKeys("john.roby76@gmail.com");
-            driver.FindElement(By.Name("pass")).SendKeys("xxxxxxxxxxxxxxxxxxxx" + Keys.Enter);
+            driver.FindElement(By.Name("email")).SendKeys("EnterYourUIDHere");
+            driver.FindElement(By.Name("pass")).SendKeys("EnterYourPasswordHere" + Keys.Enter);
 
         }
     }
