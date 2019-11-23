@@ -21,7 +21,7 @@ namespace SeleniumTutorial
             // USING FIREFOX
             //IWebDriver driver = new FirefoxDriver();
             //driver.Url = "http://facebook.com"; // Add the Url to viist on browser
-            
+
             // USING CHROME
             IWebDriver driver = new ChromeDriver(@"Enter the path where the chrome driver is located...");
             driver.Navigate().GoToUrl("http://facebook.com"); // Add the Url to viist on browser
@@ -34,6 +34,10 @@ namespace SeleniumTutorial
             // SendKeys to UID / PWD textboxes and login.
             driver.FindElement(By.Name("email")).SendKeys("EnterYourUIDHere");
             driver.FindElement(By.Name("pass")).SendKeys("EnterYourPasswordHere" + Keys.Enter);
+
+            // Click on something to navigate inside further
+            driver.FindElement(By.ClassName("_1vp5 f_click")).Click();
+
 
         }
     }
